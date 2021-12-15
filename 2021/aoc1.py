@@ -3,9 +3,9 @@
 import sys
 
 # read input
-with open('./input1.txt') as f:
-    inputs =  f.readlines()
-inputs = [int(x.replace('\n', '')) for x in inputs]
+with open("./input1.txt") as f:
+    inputs = f.readlines()
+inputs = [int(x.replace("\n", "")) for x in inputs]
 print(inputs)
 
 # Part 1

@@ -1,7 +1,7 @@
 # read input
-with open('./input9.txt') as f:
-    lines =  f.readlines()
-lines = [line.replace('\n', '') for line in lines]
+with open("./input9.txt") as f:
+    lines = f.readlines()
+lines = [line.replace("\n", "") for line in lines]
 numbers = [int(n) for n in lines]
 
 print(numbers)
@@ -17,12 +17,13 @@ def has_sum(possible_numbers, target):
     else:
         return False
 
+
 for i in range(25, len(numbers)):
-    if not has_sum(numbers[i - 25:i], numbers[i]):
+    if not has_sum(numbers[i - 25 : i], numbers[i]):
         break
 print(i)
 invalid_number = numbers[i]
-print('invalid number', invalid_number)
+print("invalid number", invalid_number)
 
 # question 2
 found = False
@@ -34,6 +35,10 @@ for i in range(len(numbers)):
             print(i, j)
             print(numbers[i:j], sum(numbers[i:j]))
             # min, max, and min + max
-            print(min(numbers[i:j]), max(numbers[i:j]), min(numbers[i:j]) + max(numbers[i:j]))
+            print(
+                min(numbers[i:j]),
+                max(numbers[i:j]),
+                min(numbers[i:j]) + max(numbers[i:j]),
+            )
             found = True
             break

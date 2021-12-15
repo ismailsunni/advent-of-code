@@ -1,7 +1,7 @@
 # read input
-with open('./input10.txt') as f:
-    lines =  f.readlines()
-lines = [line.replace('\n', '') for line in lines]
+with open("./input10.txt") as f:
+    lines = f.readlines()
+lines = [line.replace("\n", "") for line in lines]
 jolts = [int(n) for n in lines]
 
 sorted_jolts = sorted(jolts)
